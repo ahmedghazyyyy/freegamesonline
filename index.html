@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Games Online</title>
+    <meta name="description" content="Free Games Online" />
+    
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/686/686589.png" />
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/686/686589.png" />
+    <meta name="theme-color" content="#8b5cf6" />
+
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f5f3ff',
+                100: '#ede9fe',
+                200: '#ddd6fe',
+                300: '#c4b5fd',
+                400: '#a78bfa',
+                500: '#8b5cf6', // Main Violet
+                600: '#7c3aed',
+                700: '#6d28d9',
+                800: '#5b21b6',
+                900: '#4c1d95',
+                950: '#2e1065',
+              },
+              accent: {
+                400: '#22d3ee', // Cyan
+                500: '#06b6d4',
+                600: '#0891b2',
+              },
+              cta: {
+                400: '#fbbf24', // Amber/Orange
+                500: '#f59e0b',
+                600: '#d97706',
+                gradientStart: '#ff8a00',
+                gradientEnd: '#e52e71',
+              },
+              gaming: {
+                dark: '#030712', /* Ultra dark gray/black */
+                card: '#0f172a',
+                surface: '#1e293b',
+              }
+            },
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+              display: ['Outfit', 'system-ui', 'sans-serif'],
+              titan: ['Titan One', 'cursive'],
+            },
+            animation: {
+              blob: "blob 10s infinite",
+              'pulse-slow': "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              'shimmer': 'shimmer 2.5s linear infinite',
+              'gradient-x': 'gradient-x 3s ease infinite',
+              'title-glow': 'title-glow 3s ease-in-out infinite',
+              'play-bounce': 'play-bounce 0.4s ease-out forwards',
+              'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
+              'float': 'float 3s ease-in-out infinite',
+              'spin-slow': 'spin 3s linear infinite',
+            },
+            keyframes: {
+              blob: {
+                "0%": { transform: "translate(0px, 0px) scale(1)" },
+                "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                "100%": { transform: "translate(0px, 0px) scale(1)" },
+              },
+              shimmer: {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(100%)' }
+              },
+              'gradient-x': {
+                '0%, 100%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'left center'
+                },
+                '50%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'right center'
+                },
+              },
+              'title-glow': {
+                '0%, 100%': {
+                  'color': '#8b5cf6',
+                  'text-shadow': '0 0 15px rgba(139, 92, 246, 0.8), 0 0 30px rgba(139, 92, 246, 0.4)',
+                  'opacity': '1'
+                },
+                '50%': {
+                  'color': '#a78bfa',
+                  'text-shadow': '0 0 15px rgba(167, 139, 250, 0.8), 0 0 30px rgba(167, 139, 250, 0.4)',
+                  'opacity': '1'
+                }
+              },
+              'play-bounce': {
+                '0%': { transform: 'translateY(0) scale(1)' },
+                '50%': { transform: 'translateY(-4px) scale(1.05)' },
+                '100%': { transform: 'translateY(-4px) scale(1)' }
+              },
+              'fade-in-up': {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' }
+              },
+              'float': {
+                '0%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-10px)' },
+                '100%': { transform: 'translateY(0px)' }
+              }
+            },
+            boxShadow: {
+              'neon': '0 0 20px rgba(139, 92, 246, 0.5)',
+              'neon-blue': '0 0 20px rgba(34, 211, 238, 0.4)',
+              'neon-pink': '0 0 20px rgba(236, 72, 153, 0.5)',
+              'neon-orange': '0 0 20px rgba(245, 158, 11, 0.5)',
+            }
+          },
+        },
+      }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- GameMonetize SDK -->
+    <script type="text/javascript">
+       window.SDK_OPTIONS = {
+          gameId: "8z0v6v6v6v6v6v6v6v6v6v6v6v6v6v6v", // Example ID
+          onEvent: function (a) {
+             switch (a.name) {
+                case "SDK_GAME_PAUSE":
+                   // pause game logic
+                   break;
+                case "SDK_GAME_START":
+                   // advertisement done, resume game logic
+                   break;
+                case "SDK_READY":
+                   // sdk ready logic
+                   break;
+             }
+          }
+       };
+       (function (a, b, c) {
+          var d = a.getElementsByTagName(b)[0];
+          a.getElementById(c) || (a = a.createElement(b), a.id = c, a.src = "https://sdk.gamemonetize.com/sdk.js", d.parentNode.insertBefore(a, d))
+       })(document, "script", "gamemonetize-sdk");
+    </script>
+
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #030712;
+        color: #f8fafc;
+        overflow-x: hidden;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Outfit', sans-serif;
+      }
+
+      /* Advanced Professional Logo Styles */
+      .logo-text-base {
+        paint-order: stroke fill;
+        -webkit-text-stroke: 6px #020617; /* Deep outline matching bg */
+      }
+
+      .logo-gradient-mix {
+        background: linear-gradient(90deg, #facc15 0%, #ec4899 35%, #a855f7 70%, #22d3ee 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .logo-inner-online {
+        background: linear-gradient(180deg, #bef264 0%, #22c55e 50%, #15803d 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #030712; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ec4899; 
+      }
+
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      /* Cyber Grid Background Animation */
+      .bg-grid-pattern {
+        background-size: 50px 50px;
+        background-image: 
+          linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        transform: perspective(500px) rotateX(60deg);
+        transform-origin: top center;
+        animation: grid-move 20s linear infinite;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      @keyframes grid-move {
+        0% { background-position: 0 0; }
+        100% { background-position: 0 1000px; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div class="bg-grid-pattern"></div>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
